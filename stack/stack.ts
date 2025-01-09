@@ -13,6 +13,7 @@ class Stack{
 		this.#data = data
 	}
 
+	
 	/** 
 	 *	Push an element onto the stack
 	 * */
@@ -20,6 +21,7 @@ class Stack{
 		this.#data.push(el)
 	}
 
+	
 	/** 
 	 *	Removes an element from the stack
 	 * */
@@ -30,6 +32,7 @@ class Stack{
 		return this.#data.pop();
 	}
 
+	
 	/** 
 	 *	Read the first element on the stack
 	 * */
@@ -37,6 +40,7 @@ class Stack{
 		return this.#data[this.#data.length -1];
 	}
 
+	
 	/** 
 	 *	return the size of the stack
 	 * */
@@ -44,12 +48,14 @@ class Stack{
 		return this.#data.length;
 	}
 
+	
 	/** 
 	 *	Checks if the stack is empty
 	 * */
 	isEmpty(): boolean {
 		return this.#data.length === 0;
 	}
+
 
 	/** 
 	 *	Clears all data from the array
@@ -58,3 +64,4 @@ class Stack{
 		return this.#data = [];
 	}
 }
+
