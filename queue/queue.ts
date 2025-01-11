@@ -1,8 +1,7 @@
- /**
- *	Implementation of the Queue data-structure  with arrays
- *
- *	Described as the First In First Out (FIFO)
- *
+
+/**
+ * Queue data structure that implements the First In First Out(FIFO)
+ * 
  * */
 class Queue {
 	#data: number[] = [];
@@ -11,33 +10,41 @@ class Queue {
 		this.#data = data;
 	}
 
-
 	/** 
-	*	Push data onto the Queue
+	* Push data onto the Queue
 	* */
 	enqueue(el: number): void{
 		this.#data.push(el);
 	}
 
-	
 	/** 
-	*	remove first element in the Queue
+	*	Pop data from the Queue
 	* */
 	dequeue(){
+		if(this.isEmpty()){
+			return "data not found";
+		}
 		return this.#data.shift();
 	}
-
 	
 	/** 
-	*	Reads frist element in the Queue
+	*	Returns the first data in the Queue
 	* */
 	peek(): number {
 		return this.#data[0]
 	}
 
-	
 	/** 
-	*	Removes all data in the Queue
+	*	Checks if the Queue is empty Then
+	*	
+	*	Returns false if Queue is empty
+	* */
+	isEmpty(){
+		return this.#data.length === 0
+	}
+
+	/** 
+	*	Clear all data in the Queue
 	* */
 	clear(): void{
 		this.#data = []
